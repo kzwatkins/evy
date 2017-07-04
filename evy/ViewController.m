@@ -23,6 +23,20 @@
 @property (weak, nonatomic) IBOutlet UILabel *txtTimeSnapshot;
 @property (weak, nonatomic) IBOutlet UIButton *btnCountdown;
 
+// Risk
+@property (weak, nonatomic) IBOutlet UITextField *riskTitle;
+
+@property (weak, nonatomic) IBOutlet UILabel *lblRisk1;
+@property (weak, nonatomic) IBOutlet UILabel *lblRisk2;
+@property (weak, nonatomic) IBOutlet UILabel *lblRisk3;
+@property (weak, nonatomic) IBOutlet UILabel *lblRisk4;
+@property (weak, nonatomic) IBOutlet UILabel *lblRisk5;
+
+// Levels of Risk
+@property (weak, nonatomic) IBOutlet UITextField *txtLowRisk;
+@property (weak, nonatomic) IBOutlet UITextField *txtMedRisk;
+@property (weak, nonatomic) IBOutlet UITextField *txtHighRisk;
+
 @end
 
 @implementation ViewController
@@ -156,8 +170,11 @@
 
 - (void) initPress {
     self.btnCountdown.enabled = NO;
-    [self.btnCountdown setTitle:@"Countdown Begun" forState:UIControlStateNormal];
-    
+//    [self.btnCountdown setTitle:@"Countdown Begun" forState:UIControlStateNormal];
+    [self.btnCountdown setAlpha:0];
+    [self.lblRisk1 setAlpha:1];
+    [self.txtLowRisk setAlpha:1];
+    [self.riskTitle setAlpha:1];
     //TODO After testing, change this back to the total seconds.
     count = NUM_FOLLOWUP_SEC;
  }
