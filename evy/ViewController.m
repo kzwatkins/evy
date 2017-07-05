@@ -215,7 +215,7 @@
 //        }
     } else {
         if(index - 1 >= 0){
-            [self setRiskAlpha:index - 1 alpha:0];
+            [self setRiskAlpha:index - 1 alpha:0.1];
         }
         
         [self setRiskAlpha:index alpha:1];
