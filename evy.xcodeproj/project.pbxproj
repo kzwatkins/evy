@@ -520,6 +520,7 @@
 				85A5991B1F08EC0800042380 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		85A5991C1F08EC0800042380 /* Build configuration list for PBXNativeTarget "evyTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +529,7 @@
 				85A5991E1F08EC0800042380 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		85A5991F1F08EC0800042380 /* Build configuration list for PBXNativeTarget "evyUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +538,7 @@
 				85A599211F08EC0800042380 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
