@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--eVy Reminder-->
+        <!--EVY Reminder-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -241,7 +241,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Countdown is Done!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rk9-rT-9Qv">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="See a doctor." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rk9-rT-9Qv">
                                 <rect key="frame" x="84" y="611" width="210" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -255,7 +255,9 @@
                             <constraint firstItem="OSs-ZG-Tbf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fnW-zM-djG"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="eVy Reminder" id="PdJ-LD-AZ6"/>
+                    <navigationItem key="navigationItem" title="EVY Reminder" prompt="It's your health. No one will care more." id="PdJ-LD-AZ6">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="wtA-RN-daF"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="btnCountdown" destination="OsP-aj-1cf" id="5fw-jo-gNf"/>
                         <outlet property="lblCountdownDone" destination="Rk9-rT-9Qv" id="dmG-pd-uyX"/>

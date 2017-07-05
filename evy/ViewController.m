@@ -152,7 +152,7 @@
 }
 
 - (void)countdownDone {
-    [self.btnCountdown setTitle:@"Countdown Done" forState:UIControlStateNormal];
+//    [self.btnCountdown setTitle:@"See a doctor. You're at risk." forState:UIControlStateNormal];
    
     NSLog(@"Countdown is done!");
 }
