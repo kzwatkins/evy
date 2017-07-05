@@ -163,10 +163,10 @@
 //    [self.lblRisk1 setAlpha:0.5];
 //    [self.riskLevel1 setAlpha:0.5];
     [self.riskTitle setAlpha:1];
-    //TODO After testing, change this back to the total seconds.
  }
 
 - (void) initWork {
+    //TODO After testing, change this back to the total seconds.
     count = NUM_FOLLOWUP_SEC;
     [self setRiskArrays];
 }
@@ -191,23 +191,24 @@
     UILabel* riskLevelLower;
     UILabel* riskLevelUpper;
     
-    for (int i = 0; i < RISK_ARY_SIZE * 2; i++) {
-        int index = i/2;
-        
-        if((10 - i - 1)/ 10.0 * NUM_FOLLOWUP_SEC <= count){
-            [self updateRiskAlpha:1 iteratorIndex:i];
-        } else if((10 - i - 1)/ 10.0 * NUM_FOLLOWUP_SEC <= count){
-            [self updateRiskAlpha:1 iteratorIndex:i];
-        }
+//    for (int i = 0; i < RISK_ARY_SIZE * 2; i++) {
+    int index = 10.0 * (NUM_FOLLOWUP_SEC - count) / NUM_FOLLOWUP_SEC; //i/2;
+    
+    index /= 2;
+//        if((10 - i - 1)/ 10.0 * NUM_FOLLOWUP_SEC <= count){
+            [self updateRiskAlpha:index];
+//        } else if((10 - i - 1)/ 10.0 * NUM_FOLLOWUP_SEC <= count){
+//            [self updateRiskAlpha:1 iteratorIndex:i];
+//        }
    
         riskLevel = NULL;
         riskLevelLower = NULL;
         riskLevelUpper = NULL;
-    }
+//    }
 }
 
-- (void) updateRiskAlpha:(int) index iteratorIndex: (int) i {
-    if(i % 2 == 0){
+- (void) updateRiskAlpha:(int) index {
+    if(index % 2 == 0){
         [self setRiskAlpha:index alpha:0.5];
         
         if(index - 1 >= 0){
