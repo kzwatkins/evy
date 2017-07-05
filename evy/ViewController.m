@@ -59,6 +59,8 @@
 }
 
 - (IBAction)btnCountdown:(id)sender {
+    // 0) Init
+    [self initWork];
     
    // 1) Initial btn press handling
     if(self.btnCountdown.isEnabled){
@@ -87,7 +89,7 @@
     count--;
     self.txtTimeSnapshot.text = [NSString stringWithFormat:@"%d", count];
     [self updateTimeShown];
-    
+    [self showRisk:count];
     if(count <= 0){
         [self postCountdown];
     }
@@ -158,12 +160,16 @@
 - (void) initPress {
     self.btnCountdown.enabled = NO;
     [self.btnCountdown setAlpha:0];
-    [self.lblRisk1 setAlpha:0.5];
-    [self.riskLevel1 setAlpha:0.5];
+//    [self.lblRisk1 setAlpha:0.5];
+//    [self.riskLevel1 setAlpha:0.5];
     [self.riskTitle setAlpha:1];
     //TODO After testing, change this back to the total seconds.
-    count = NUM_FOLLOWUP_SEC;
  }
+
+- (void) initWork {
+    count = NUM_FOLLOWUP_SEC;
+    [self setRiskArrays];
+}
 
 - (void) setRiskArrays {
     [riskLabelAry addObject:self.lblRisk1];
@@ -179,12 +185,12 @@
     [riskLevelAry addObject:self.riskLevel5];
 }
 
-- (void) showLevel: (int) seconds {
+- (void) showRisk: (int) seconds {
     UILabel* riskLevel;
     UILabel* riskLevelLower;
     UILabel* riskLevelUpper;
     
-    for (int i = 0; i < RISK_ARY_SIZE; i++) {
+    for (int i = 0; i < RISK_ARY_SIZE * 2; i++) {
         int index = i/2;
         
         if(i % 2 == 0){

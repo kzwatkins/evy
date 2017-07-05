@@ -132,55 +132,55 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.05000000074505806" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTU-Vd-gpA">
-                                <rect key="frame" x="133" y="591" width="98" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTU-Vd-gpA">
+                                <rect key="frame" x="133" y="573" width="98" height="41"/>
                                 <color key="backgroundColor" red="0.14272791800000001" green="0.28748379039999999" blue="0.97269672929999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.05000000074505806" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRX-cH-zwp">
-                                <rect key="frame" x="133" y="395" width="98" height="41"/>
+                                <rect key="frame" x="133" y="377" width="98" height="41"/>
                                 <color key="backgroundColor" red="0.97269672929999995" green="0.034383243059999999" blue="0.033324974799999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.05000000074505806" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ahx-L2-JDu">
-                                <rect key="frame" x="133" y="542" width="98" height="41"/>
+                                <rect key="frame" x="133" y="524" width="98" height="41"/>
                                 <color key="backgroundColor" red="1" green="0.92602118870000005" blue="0.032631645889999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.05000000074505806" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRK-UZ-tqf">
-                                <rect key="frame" x="133" y="493" width="98" height="41"/>
+                                <rect key="frame" x="133" y="475" width="98" height="41"/>
                                 <color key="backgroundColor" red="0.97269672929999995" green="0.59184711150000002" blue="0.089846780220000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.05000000074505806" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FG1-ra-UOZ">
-                                <rect key="frame" x="133" y="444" width="98" height="41"/>
+                                <rect key="frame" x="133" y="426" width="98" height="41"/>
                                 <color key="backgroundColor" red="0.97269672929999995" green="0.59184711150000002" blue="0.089846780220000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" alpha="0.05000000074505806" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Low" placeholder="0" textAlignment="center" minimumFontSize="21" translatesAutoresizingMaskIntoConstraints="NO" id="Scc-FB-Y0Q">
-                                <rect key="frame" x="253" y="598" width="81" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.29999999999999999" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Low" placeholder="0" textAlignment="center" minimumFontSize="21" translatesAutoresizingMaskIntoConstraints="NO" id="Scc-FB-Y0Q">
+                                <rect key="frame" x="253" y="580" width="81" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" alpha="0.05000000074505806" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Medium" placeholder="0" textAlignment="center" minimumFontSize="21" translatesAutoresizingMaskIntoConstraints="NO" id="VdW-Eu-e6a">
-                                <rect key="frame" x="253" y="499" width="81" height="28"/>
+                                <rect key="frame" x="253" y="481" width="81" height="28"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" alpha="0.05000000074505806" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="High" placeholder="0" textAlignment="center" minimumFontSize="21" translatesAutoresizingMaskIntoConstraints="NO" id="Znp-UI-luA">
-                                <rect key="frame" x="253" y="401" width="81" height="28"/>
+                                <rect key="frame" x="253" y="383" width="81" height="28"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -198,20 +198,20 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" alpha="0.10000000000000001" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Risk for Concussion" placeholder="0" textAlignment="center" minimumFontSize="21" translatesAutoresizingMaskIntoConstraints="NO" id="6E7-gC-Xjn">
-                                <rect key="frame" x="24" y="359" width="327" height="31"/>
+                                <rect key="frame" x="24" y="341" width="327" height="31"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" alpha="0.05000000074505806" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Med Low" placeholder="0" textAlignment="center" minimumFontSize="21" translatesAutoresizingMaskIntoConstraints="NO" id="TfX-ih-aU2">
-                                <rect key="frame" x="253" y="547" width="81" height="30"/>
+                                <rect key="frame" x="253" y="529" width="81" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" alpha="0.05000000074505806" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Med High" placeholder="0" textAlignment="center" minimumFontSize="21" translatesAutoresizingMaskIntoConstraints="NO" id="Jo1-A3-k7a">
-                                <rect key="frame" x="253" y="452" width="81" height="25"/>
+                                <rect key="frame" x="253" y="434" width="81" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -277,18 +277,15 @@
                         <outlet property="lblRisk3" destination="GRK-UZ-tqf" id="hQO-LD-3nR"/>
                         <outlet property="lblRisk4" destination="FG1-ra-UOZ" id="YWw-dB-hqX"/>
                         <outlet property="lblRisk5" destination="fRX-cH-zwp" id="nvP-BU-Iql"/>
-                        <outlet property="riskLevel1" destination="Scc-FB-Y0Q" id="Unb-H5-ps4"/>
+                        <outlet property="riskLevel1" destination="Scc-FB-Y0Q" id="Tvo-v2-KLP"/>
                         <outlet property="riskLevel2" destination="TfX-ih-aU2" id="rHv-HS-bVy"/>
                         <outlet property="riskLevel3" destination="VdW-Eu-e6a" id="7zh-jy-Gfp"/>
                         <outlet property="riskLevel4" destination="Jo1-A3-k7a" id="oBo-Wc-F3T"/>
                         <outlet property="riskLevel5" destination="Znp-UI-luA" id="BzL-F8-c1y"/>
                         <outlet property="riskTitle" destination="6E7-gC-Xjn" id="6wQ-Ne-y6p"/>
                         <outlet property="txtDays" destination="p2D-Ls-1ie" id="lSK-dl-lSF"/>
-                        <outlet property="txtHighRisk" destination="Znp-UI-luA" id="FVG-n6-ucg"/>
                         <outlet property="txtHrOnes" destination="JJZ-Vz-xFK" id="Gyf-iZ-V1s"/>
                         <outlet property="txtHrTens" destination="MR2-Ga-1Zi" id="fsN-2j-cgt"/>
-                        <outlet property="txtLowRisk" destination="Scc-FB-Y0Q" id="ODf-uT-Vjn"/>
-                        <outlet property="txtMedRisk" destination="VdW-Eu-e6a" id="Hod-yl-Slp"/>
                         <outlet property="txtMinOnes" destination="g1P-Mz-FAE" id="G0u-58-QoY"/>
                         <outlet property="txtMinTens" destination="GYB-L3-p3l" id="bpX-ps-Ipd"/>
                         <outlet property="txtSecOnes" destination="WsL-qv-tm9" id="xNi-tB-LA7"/>

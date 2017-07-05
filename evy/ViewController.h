@@ -28,6 +28,7 @@ NSMutableArray* riskLevelAry;
 @interface ViewController : UIViewController
 
 // Initial work
+- (void) initWork;
 - (void) initPress;
 
 //
@@ -52,7 +53,7 @@ NSMutableArray* riskLevelAry;
 
 // Handling Risk
 - (void) setRiskArrays;
-- (void) showLevel: (int) seconds;
+- (void) showRisk: (int) seconds;
 - (void) setRiskAlpha:(int) index alpha:(double) alpha;
 
 
