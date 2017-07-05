@@ -160,8 +160,6 @@
 - (void) initPress {
     self.btnCountdown.enabled = NO;
     [self.btnCountdown setAlpha:0];
-//    [self.lblRisk1 setAlpha:0.5];
-//    [self.riskLevel1 setAlpha:0.5];
     [self.riskTitle setAlpha:1];
  }
 
@@ -187,18 +185,11 @@
 
 //TODO Add in risk showing logic.
 - (void) showRisk: (int) seconds {
-//    for (int i = 0; i < RISK_ARY_SIZE * 2; i++) {
-    int index = 10.0 * (NUM_FOLLOWUP_SEC - count) / NUM_FOLLOWUP_SEC - 1; //i/2;
+    int index = 10.0 * (NUM_FOLLOWUP_SEC - count) / NUM_FOLLOWUP_SEC - 1;
     
     int iterator = index % 2;
     index = (index / 2);
-//        if((10 - i - 1)/ 10.0 * NUM_FOLLOWUP_SEC <= count){
     [self updateRiskAlpha:index iterator:iterator];
-//        } else if((10 - i - 1)/ 10.0 * NUM_FOLLOWUP_SEC <= count){
-//            [self updateRiskAlpha:1 iteratorIndex:i];
-//        }
-   
-//    }
 }
 
 - (void) updateRiskAlpha:(int) index iterator:(int) iterator{
@@ -209,24 +200,13 @@
         
         [self setRiskAlpha:index alpha:0.5];
         
-
-//        if(index + 1 < RISK_ARY_SIZE){
-//            [self setRiskAlpha:index + 1 alpha:0.5];
-//        }
     } else {
         if(index - 1 >= 0){
             [self setRiskAlpha:index - 1 alpha:0.1];
         }
         
         [self setRiskAlpha:index alpha:1];
-
-    
-
-//        if(index + 1 == RISK_ARY_SIZE){
-//            [self setRiskAlpha:index + 1 alpha:1];
-//        }
-}
-
+    }
 }
 
 - (void) setRiskAlpha:(int) index alpha:(double) alpha{
