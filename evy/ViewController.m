@@ -47,9 +47,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    riskLabelAry = [[NSMutableArray alloc] initWithCapacity:5];
+    riskLabelAry = [[NSMutableArray alloc] initWithCapacity:RISK_ARY_SIZE];
 
-    riskLevelAry = [[NSMutableArray alloc] initWithCapacity:5];
+    riskLevelAry = [[NSMutableArray alloc] initWithCapacity:RISK_ARY_SIZE];
 }
 
 
@@ -177,6 +177,63 @@
     [riskLevelAry addObject:self.riskLevel3];
     [riskLevelAry addObject:self.riskLevel4];
     [riskLevelAry addObject:self.riskLevel5];
+}
+
+- (void) showLevel: (int) seconds {
+    UILabel* riskLevel;
+    UILabel* riskLevelLower;
+    UILabel* riskLevelUpper;
+    
+    for (int i = 0; i < RISK_ARY_SIZE; i++) {
+        int index = i/2;
+        
+        if(i % 2 == 0){
+            [self setRiskAlpha:index alpha:0.5];
+            
+            if(index - 1 >= 0){
+                [self setRiskAlpha:index - 1 alpha:0];
+
+//                riskLevelLower = [riskLevelAry objectAtIndex: index - 1];
+//                
+//                [riskLevel setAlpha:0];
+            }
+            
+            if(index + 1 < RISK_ARY_SIZE){
+                [self setRiskAlpha:index + 1 alpha:0.5];
+//
+//                riskLevelUpper = [riskLevelAry objectAtIndex: index + 1];
+//                
+//                [riskLevel setAlpha:0.5];
+            }
+        } else {
+            [self setRiskAlpha:index alpha:0];
+
+//            riskLevel = [riskLevelAry objectAtIndex: index];
+//            
+//            [riskLevel setAlpha:0];
+            
+            
+            if(index + 1 < RISK_ARY_SIZE){
+                [self setRiskAlpha:index + 1 alpha:1];
+//               riskLevelUpper = [riskLevelAry objectAtIndex: index + 1];
+//                
+//                [riskLevel setAlpha:1];
+            }
+        }
+        
+        riskLevel = NULL;
+        riskLevelLower = NULL;
+        riskLevelUpper = NULL;
+    }
+}
+
+- (void) setRiskAlpha:(int) index alpha:(double) alpha{
+    UILabel* riskLevel = [riskLevelAry objectAtIndex: index];
+    UILabel* riskLabel = [riskLabelAry objectAtIndex: index];
+    
+    
+    [riskLevel setAlpha:alpha];
+    [riskLabel setAlpha:alpha];
 }
 
 - (NSString*)getTimeSnapshot {

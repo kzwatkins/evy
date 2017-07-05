@@ -8,15 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-enum
-{
+enum {
     
     NUM_FOLLOWUP_DAYS = 180,
     HR_MAX = 24,
     MIN_MAX = 60,
     SEC_MAX = 60,
     DAY_MAX = 365,
-    NUM_FOLLOWUP_SEC = NUM_FOLLOWUP_DAYS * HR_MAX * MIN_MAX * SEC_MAX
+    NUM_FOLLOWUP_SEC = NUM_FOLLOWUP_DAYS * HR_MAX * MIN_MAX * SEC_MAX,
+    RISK_ARY_SIZE = 5
 };
 
 NSTimer* timer;
@@ -52,7 +52,8 @@ NSMutableArray* riskLevelAry;
 
 // Handling Risk
 - (void) setRiskArrays;
-
+- (void) showLevel: (int) seconds;
+- (void) setRiskAlpha:(int) index alpha:(double) alpha;
 
 
 @end
