@@ -22,6 +22,8 @@ enum
 NSTimer* timer;
 //NSRunLoop *runner;
 int count = 0;
+NSMutableArray* riskLabelAry;
+NSMutableArray* riskLevelAry;
 
 @interface ViewController : UIViewController
 
@@ -47,6 +49,11 @@ int count = 0;
 // The countdown has completed.
 - (void) postCountdown;
 - (void) countdownDone;
+
+// Handling Risk
+- (void) setRiskArrays;
+
+
 
 @end
 

@@ -203,6 +203,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.05000000074505806" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Med Low" placeholder="0" textAlignment="center" minimumFontSize="21" translatesAutoresizingMaskIntoConstraints="NO" id="TfX-ih-aU2">
+                                <rect key="frame" x="253" y="547" width="81" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.05000000074505806" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Med High" placeholder="0" textAlignment="center" minimumFontSize="21" translatesAutoresizingMaskIntoConstraints="NO" id="Jo1-A3-k7a">
+                                <rect key="frame" x="253" y="452" width="81" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -263,6 +277,11 @@
                         <outlet property="lblRisk3" destination="GRK-UZ-tqf" id="hQO-LD-3nR"/>
                         <outlet property="lblRisk4" destination="FG1-ra-UOZ" id="YWw-dB-hqX"/>
                         <outlet property="lblRisk5" destination="fRX-cH-zwp" id="nvP-BU-Iql"/>
+                        <outlet property="riskLevel1" destination="Scc-FB-Y0Q" id="Unb-H5-ps4"/>
+                        <outlet property="riskLevel2" destination="TfX-ih-aU2" id="rHv-HS-bVy"/>
+                        <outlet property="riskLevel3" destination="VdW-Eu-e6a" id="7zh-jy-Gfp"/>
+                        <outlet property="riskLevel4" destination="Jo1-A3-k7a" id="oBo-Wc-F3T"/>
+                        <outlet property="riskLevel5" destination="Znp-UI-luA" id="BzL-F8-c1y"/>
                         <outlet property="riskTitle" destination="6E7-gC-Xjn" id="6wQ-Ne-y6p"/>
                         <outlet property="txtDays" destination="p2D-Ls-1ie" id="lSK-dl-lSF"/>
                         <outlet property="txtHighRisk" destination="Znp-UI-luA" id="FVG-n6-ucg"/>

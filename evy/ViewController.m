@@ -33,9 +33,12 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblRisk5;
 
 // Levels of Risk
-@property (weak, nonatomic) IBOutlet UITextField *txtLowRisk;
-@property (weak, nonatomic) IBOutlet UITextField *txtMedRisk;
-@property (weak, nonatomic) IBOutlet UITextField *txtHighRisk;
+@property (weak, nonatomic) IBOutlet UITextField *riskLevel1;
+@property (weak, nonatomic) IBOutlet UITextField *riskLevel2;
+@property (weak, nonatomic) IBOutlet UITextField *riskLevel3;
+@property (weak, nonatomic) IBOutlet UITextField *riskLevel4;
+@property (weak, nonatomic) IBOutlet UITextField *riskLevel5;
+
 
 @end
 
@@ -43,7 +46,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    riskLabelAry = [[NSMutableArray alloc] initWithCapacity:5];
+
+    riskLevelAry = [[NSMutableArray alloc] initWithCapacity:5];
 }
 
 
@@ -53,19 +59,6 @@
 }
 
 - (IBAction)btnCountdown:(id)sender {
-    
-    int days = self.txtDays.text.intValue;
-    
-    int hrTens = self.txtHrTens.text.intValue;
-    int hrOnes = self.txtHrOnes.text.intValue;
-    
-    int minTens = self.txtMinTens.text.intValue;
-    int minOnes = self.txtMinOnes.text.intValue;
-    
-    int secTens = self.txtSecTens.text.intValue;
-    int secOnes = self.txtSecOnes.text.intValue;
-    
-    [self printCountdown: days hrTens: hrTens hrOnes: hrOnes minTens: minTens minOnes: minOnes secTens: secTens secOnes: secOnes];
     
    // 1) Initial btn press handling
     if(self.btnCountdown.isEnabled){
@@ -91,10 +84,6 @@
 
 
 - (void) updateTimeView {
-//    NSDate *startDate = [[timer userInfo] objectForKey:@"StartDate"];
-//    
-//    NSLog(@"Timer started on %@", startDate);
-    
     count--;
     self.txtTimeSnapshot.text = [NSString stringWithFormat:@"%d", count];
     [self updateTimeShown];
@@ -135,8 +124,6 @@
 
 - (void) updateTimeText: (int) maxTime timeLen: (int)timeLen txtTensPlace:(UITextField*) tensPlace txtOnesPlace:(UITextField*) onesPlace{
 
-//    int totalTime = count * maxTime;
-//    int time = count % maxTime;
     NSLog (@"PreTime(s): %d", timeLen);
     timeLen = timeLen % maxTime;
     NSLog (@"PostTime(s): %d", timeLen);
@@ -170,14 +157,27 @@
 
 - (void) initPress {
     self.btnCountdown.enabled = NO;
-//    [self.btnCountdown setTitle:@"Countdown Begun" forState:UIControlStateNormal];
     [self.btnCountdown setAlpha:0];
-    [self.lblRisk1 setAlpha:1];
-    [self.txtLowRisk setAlpha:1];
+    [self.lblRisk1 setAlpha:0.5];
+    [self.riskLevel1 setAlpha:0.5];
     [self.riskTitle setAlpha:1];
     //TODO After testing, change this back to the total seconds.
     count = NUM_FOLLOWUP_SEC;
  }
+
+- (void) setRiskArrays {
+    [riskLabelAry addObject:self.lblRisk1];
+    [riskLabelAry addObject:self.lblRisk2];
+    [riskLabelAry addObject:self.lblRisk3];
+    [riskLabelAry addObject:self.lblRisk4];
+    [riskLabelAry addObject:self.lblRisk5];
+    
+    [riskLevelAry addObject:self.riskLevel1];
+    [riskLevelAry addObject:self.riskLevel2];
+    [riskLevelAry addObject:self.riskLevel3];
+    [riskLevelAry addObject:self.riskLevel4];
+    [riskLevelAry addObject:self.riskLevel5];
+}
 
 - (NSString*)getTimeSnapshot {
     long long timeSeconds = (long long)([[NSDate date] timeIntervalSince1970]);
