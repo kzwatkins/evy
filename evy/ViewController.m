@@ -39,6 +39,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *riskLevel4;
 @property (weak, nonatomic) IBOutlet UITextField *riskLevel5;
 
+// Post Countdown
+@property (weak, nonatomic) IBOutlet UILabel *lblCountdownDone;
+
 
 @end
 
@@ -126,9 +129,9 @@
 
 - (void) updateTimeText: (int) maxTime timeLen: (int)timeLen txtTensPlace:(UITextField*) tensPlace txtOnesPlace:(UITextField*) onesPlace{
 
-    NSLog (@"PreTime(s): %d", timeLen);
+//    NSLog (@"PreTime(s): %d", timeLen);
     timeLen = timeLen % maxTime;
-    NSLog (@"PostTime(s): %d", timeLen);
+//    NSLog (@"PostTime(s): %d", timeLen);
    
     [tensPlace setText:[NSString stringWithFormat:@"%d", timeLen / 10]];
     [onesPlace setText:[NSString stringWithFormat:@"%d", timeLen % 10]];
@@ -138,6 +141,7 @@
 - (void) postCountdown {
     [self stopTimer];
     [self countdownDone];
+    [self.lblCountdownDone setAlpha:1];
 }
 
 - (void) stopTimer {
