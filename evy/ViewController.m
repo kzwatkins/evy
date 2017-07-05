@@ -187,44 +187,44 @@
 
 //TODO Add in risk showing logic.
 - (void) showRisk: (int) seconds {
-    UILabel* riskLevel;
-    UILabel* riskLevelLower;
-    UILabel* riskLevelUpper;
-    
 //    for (int i = 0; i < RISK_ARY_SIZE * 2; i++) {
-    int index = 10.0 * (NUM_FOLLOWUP_SEC - count) / NUM_FOLLOWUP_SEC; //i/2;
+    int index = 10.0 * (NUM_FOLLOWUP_SEC - count) / NUM_FOLLOWUP_SEC - 1; //i/2;
     
-    index /= 2;
+    index = (index / 2);
 //        if((10 - i - 1)/ 10.0 * NUM_FOLLOWUP_SEC <= count){
             [self updateRiskAlpha:index];
 //        } else if((10 - i - 1)/ 10.0 * NUM_FOLLOWUP_SEC <= count){
 //            [self updateRiskAlpha:1 iteratorIndex:i];
 //        }
    
-        riskLevel = NULL;
-        riskLevelLower = NULL;
-        riskLevelUpper = NULL;
 //    }
 }
 
 - (void) updateRiskAlpha:(int) index {
     if(index % 2 == 0){
+        
+        if(index - 1 >= 0){
+            [self setRiskAlpha:index - 1 alpha:0.5];
+        }
+ 
         [self setRiskAlpha:index alpha:0.5];
+
+//        if(index + 1 < RISK_ARY_SIZE){
+//            [self setRiskAlpha:index + 1 alpha:0.5];
+//        }
+    } else {
+        
         
         if(index - 1 >= 0){
             [self setRiskAlpha:index - 1 alpha:0];
         }
         
-        if(index + 1 < RISK_ARY_SIZE){
-            [self setRiskAlpha:index + 1 alpha:0.5];
-        }
-    } else {
-        [self setRiskAlpha:index alpha:0];
-        
-        if(index + 1 < RISK_ARY_SIZE){
-            [self setRiskAlpha:index + 1 alpha:1];
-        }
-    }
+        [self setRiskAlpha:index alpha:1];
+
+//        if(index + 1 == RISK_ARY_SIZE){
+//            [self setRiskAlpha:index + 1 alpha:1];
+//        }
+}
 
 }
 
