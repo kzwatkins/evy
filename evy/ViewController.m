@@ -190,9 +190,10 @@
 //    for (int i = 0; i < RISK_ARY_SIZE * 2; i++) {
     int index = 10.0 * (NUM_FOLLOWUP_SEC - count) / NUM_FOLLOWUP_SEC - 1; //i/2;
     
+    int iterator = index % 2;
     index = (index / 2);
 //        if((10 - i - 1)/ 10.0 * NUM_FOLLOWUP_SEC <= count){
-            [self updateRiskAlpha:index];
+    [self updateRiskAlpha:index iterator:iterator];
 //        } else if((10 - i - 1)/ 10.0 * NUM_FOLLOWUP_SEC <= count){
 //            [self updateRiskAlpha:1 iteratorIndex:i];
 //        }
@@ -200,26 +201,26 @@
 //    }
 }
 
-- (void) updateRiskAlpha:(int) index {
-    if(index % 2 == 0){
-        
+- (void) updateRiskAlpha:(int) index iterator:(int) iterator{
+    if(iterator % 2 == 0){
         if(index - 1 >= 0){
             [self setRiskAlpha:index - 1 alpha:0.5];
         }
- 
+        
         [self setRiskAlpha:index alpha:0.5];
+        
 
 //        if(index + 1 < RISK_ARY_SIZE){
 //            [self setRiskAlpha:index + 1 alpha:0.5];
 //        }
     } else {
-        
-        
         if(index - 1 >= 0){
             [self setRiskAlpha:index - 1 alpha:0];
         }
         
         [self setRiskAlpha:index alpha:1];
+
+    
 
 //        if(index + 1 == RISK_ARY_SIZE){
 //            [self setRiskAlpha:index + 1 alpha:1];
