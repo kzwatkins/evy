@@ -185,6 +185,7 @@
     [riskLevelAry addObject:self.riskLevel5];
 }
 
+//TODO Add in risk showing logic.
 - (void) showRisk: (int) seconds {
     UILabel* riskLevel;
     UILabel* riskLevelLower;
@@ -193,44 +194,37 @@
     for (int i = 0; i < RISK_ARY_SIZE * 2; i++) {
         int index = i/2;
         
-        if(i % 2 == 0){
-            [self setRiskAlpha:index alpha:0.5];
-            
-            if(index - 1 >= 0){
-                [self setRiskAlpha:index - 1 alpha:0];
-
-//                riskLevelLower = [riskLevelAry objectAtIndex: index - 1];
-//                
-//                [riskLevel setAlpha:0];
-            }
-            
-            if(index + 1 < RISK_ARY_SIZE){
-                [self setRiskAlpha:index + 1 alpha:0.5];
-//
-//                riskLevelUpper = [riskLevelAry objectAtIndex: index + 1];
-//                
-//                [riskLevel setAlpha:0.5];
-            }
-        } else {
-            [self setRiskAlpha:index alpha:0];
-
-//            riskLevel = [riskLevelAry objectAtIndex: index];
-//            
-//            [riskLevel setAlpha:0];
-            
-            
-            if(index + 1 < RISK_ARY_SIZE){
-                [self setRiskAlpha:index + 1 alpha:1];
-//               riskLevelUpper = [riskLevelAry objectAtIndex: index + 1];
-//                
-//                [riskLevel setAlpha:1];
-            }
+        if((10 - i - 1)/ 10.0 * NUM_FOLLOWUP_SEC <= count){
+            [self updateRiskAlpha:1 iteratorIndex:i];
+        } else if((10 - i - 1)/ 10.0 * NUM_FOLLOWUP_SEC <= count){
+            [self updateRiskAlpha:1 iteratorIndex:i];
         }
-        
+   
         riskLevel = NULL;
         riskLevelLower = NULL;
         riskLevelUpper = NULL;
     }
+}
+
+- (void) updateRiskAlpha:(int) index iteratorIndex: (int) i {
+    if(i % 2 == 0){
+        [self setRiskAlpha:index alpha:0.5];
+        
+        if(index - 1 >= 0){
+            [self setRiskAlpha:index - 1 alpha:0];
+        }
+        
+        if(index + 1 < RISK_ARY_SIZE){
+            [self setRiskAlpha:index + 1 alpha:0.5];
+        }
+    } else {
+        [self setRiskAlpha:index alpha:0];
+        
+        if(index + 1 < RISK_ARY_SIZE){
+            [self setRiskAlpha:index + 1 alpha:1];
+        }
+    }
+
 }
 
 - (void) setRiskAlpha:(int) index alpha:(double) alpha{

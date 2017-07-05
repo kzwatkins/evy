@@ -55,7 +55,7 @@ NSMutableArray* riskLevelAry;
 - (void) setRiskArrays;
 - (void) showRisk: (int) seconds;
 - (void) setRiskAlpha:(int) index alpha:(double) alpha;
-
+- (void) updateRiskAlpha:(int) index iteratorIndex: (int) i;
 
 @end
 
